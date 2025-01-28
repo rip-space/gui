@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: green;
+    background-width: 5px;
+    margin: 0px 0px ;
+    padding: 100px 100px;
+    border-radius: 4px;
+    animation-name: gui-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-decoration: none; 
+    text-align: top; 
+    color: white;  
+}
+#gui {
+    text-align: center;
+    top: 0;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 65px;
+    padding: 7px 7px;
+    background-width: 5px;
+}
+#button {
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 45px;
+    padding: 7px 7px;
+    background-width: 5px;
+    color: white;
+}
+
+@keyframes gui-background{
+    0%  { background-colorc: #6666ff;}
+    25% { background-color: #0099ff;}
+    50% { background-color: #00ff00;}
+    75% { background-color:  #ff3399;}
+    100% {background-color: #6666ff;}
+}    
+</style>
+</head>
+<body>   
+ <h1 id="gui">gui test</h1>
+ <button id="button" onclick="textEdit()">idk</button>
+ <script>
+    function textEdit() {
+if(document.body.contentEditable !== 'true') {
+    document.body.contentEditable = 'true'; document.designMode='on'; void 0
+} else {
+    document.body.contentEditable = 'false'; document.designMode='off'; void 0
+}
+}
+ </script>   
+</body>
+</html>
